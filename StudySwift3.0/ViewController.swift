@@ -12,7 +12,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let ocfile = OCFile(name: "test")
+        view.backgroundColor = UIColor.red()
+        print(ocfile?.name)
+        
+
+        
+        let noti = NSNotification(name: "testName" as NSNotification.Name, object: self)
+        let notiCenter = NotificationCenter.default()
+        
+        notiCenter.addObserver(self, selector: #selector(self.testNoti(noti:)), name: "testName" as NSNotification.Name, object: self)
+
+        //延时2s
+        sleep(2)
+
+        notiCenter.post(noti as Notification)
+        
+        
+        
+    }
+    
+    func testNoti(noti: Notification) {
+        print(noti)
     }
 
     override func didReceiveMemoryWarning() {

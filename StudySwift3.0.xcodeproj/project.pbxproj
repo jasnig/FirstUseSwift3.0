@@ -14,6 +14,7 @@
 		4B4C4DB41D113456008C147C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C4DB21D113456008C147C /* LaunchScreen.storyboard */; };
 		4B4C4DBF1D113457008C147C /* StudySwift3_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C4DBE1D113457008C147C /* StudySwift3_0Tests.swift */; };
 		4B4C4DCA1D113457008C147C /* StudySwift3_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C4DC91D113457008C147C /* StudySwift3_0UITests.swift */; };
+		4B4C4DDA1D1134CA008C147C /* OCFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C4DD91D1134CA008C147C /* OCFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		4B4C4DC51D113457008C147C /* StudySwift3.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudySwift3.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4C4DC91D113457008C147C /* StudySwift3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySwift3_0UITests.swift; sourceTree = "<group>"; };
 		4B4C4DCB1D113457008C147C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B4C4DD71D1134C9008C147C /* StudySwift3.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudySwift3.0-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B4C4DD81D1134CA008C147C /* OCFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFile.h; sourceTree = "<group>"; };
+		4B4C4DD91D1134CA008C147C /* OCFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,13 @@
 			children = (
 				4B4C4DA91D113456008C147C /* AppDelegate.swift */,
 				4B4C4DAB1D113456008C147C /* ViewController.swift */,
+				4B4C4DD81D1134CA008C147C /* OCFile.h */,
+				4B4C4DD91D1134CA008C147C /* OCFile.m */,
 				4B4C4DAD1D113456008C147C /* Main.storyboard */,
 				4B4C4DB01D113456008C147C /* Assets.xcassets */,
 				4B4C4DB21D113456008C147C /* LaunchScreen.storyboard */,
 				4B4C4DB51D113456008C147C /* Info.plist */,
+				4B4C4DD71D1134C9008C147C /* StudySwift3.0-Bridging-Header.h */,
 			);
 			path = StudySwift3.0;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9G8PCT5S2D;
 						DevelopmentTeamName = "晶 曾 (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					4B4C4DB91D113457008C147C = {
@@ -266,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4C4DAC1D113456008C147C /* ViewController.swift in Sources */,
+				4B4C4DDA1D1134CA008C147C /* OCFile.m in Sources */,
 				4B4C4DAA1D113456008C147C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StudySwift3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroJ.StudySwift3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudySwift3.0/StudySwift3.0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StudySwift3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroJ.StudySwift3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudySwift3.0/StudySwift3.0-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
